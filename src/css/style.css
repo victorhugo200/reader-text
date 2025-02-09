@@ -1,0 +1,92 @@
+
+:root {
+  --background-color: #F4F7FB;
+  --text-color: #333333;
+  --heading-color: #2C3E50;
+  --textarea-bg: #FFFFFF;
+  --textarea-border: #D1D8E0;
+  --textarea-focus-border: #3498DB;
+  --button-text-color: #FFFFFF;
+  --button-read-bg: #1ABC9C;
+  --button-read-hover-bg: #16A085;
+  --button-pause-bg: #E74C3C;
+  --button-pause-hover-bg: #C0392B;
+  --link-color: #3498DB;
+  --secondary-text-color: #7F8C8D;
+  --button-disabled-bg: #7F8C8D;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Merriweather', sans-serif;
+}
+
+.wrapper {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: var(--heading-color);
+}
+
+textarea {
+  background-color: var(--textarea-bg);
+  color: var(--text-color);
+  border: 1px solid var(--textarea-border);
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  min-height: 150px;
+}
+
+textarea:focus {
+  border-color: var(--textarea-focus-border);
+  outline: none;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.read {
+  background-color: var(--button-read-bg);
+}
+
+button.read:not(:disabled):hover {
+  background-color: var(--button-read-hover-bg);
+}
+
+button.pause {
+  background-color: var(--button-pause-bg);
+}
+
+button.pause:not(:disabled):hover {
+  background-color: var(--button-pause-hover-bg);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+small {
+  color: var(--secondary-text-color);
+}
+
+button:disabled {
+  background-color: var(--button-disabled-bg);
+}
