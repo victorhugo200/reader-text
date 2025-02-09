@@ -1,4 +1,8 @@
-
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 :root {
   --background-color: #F4F7FB;
   --text-color: #333333;
@@ -22,14 +26,16 @@ body {
   font-family: 'Merriweather', sans-serif;
 }
 
-.wrapper {
+.container {
   max-width: 920px;
   width: 100%;
   margin: 0 auto;
 }
 
+
 h1 {
   color: var(--heading-color);
+  padding: 36px 0;
 }
 
 textarea {
@@ -40,6 +46,7 @@ textarea {
   font-size: 16px;
   width: 100%;
   min-height: 150px;
+  resize: vertical;
 }
 
 textarea:focus {
@@ -47,10 +54,16 @@ textarea:focus {
   outline: none;
 }
 
+.container-buttons {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
 
 button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
   color: var(--button-text-color);
   border: none;
   cursor: pointer;
@@ -89,4 +102,20 @@ small {
 
 button:disabled {
   background-color: var(--button-disabled-bg);
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    padding: 12px 0;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
 }

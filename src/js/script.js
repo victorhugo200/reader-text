@@ -10,7 +10,7 @@ text.addEventListener('blur', () => {
     enableElement(btn);
     if (speechSynthesis.speaking) {
       speechSynthesis.cancel();
-      btnPause.textContent = 'Parar';
+      changeButtonLabel(btnPause, 'Parar', 'Parar leitura');
     }
     disableElement(btnPause);
     createSpeak(value);
@@ -29,7 +29,8 @@ btn.addEventListener('click', () => {
 btnPause.addEventListener('click', () => {
   if (speechSynthesis.paused) {
     speechSynthesis.resume();
-    btnPause.textContent = 'Parar';
+    changeButtonLabel(btnPause, 'Parar', 'Parar leitura');
+
   } else {
     speechSynthesis.pause();
   }
@@ -55,9 +56,14 @@ function createSpeak(value) {
     enableElement(btn);
   };
   fala.onpause = () => {
-    btnPause.textContent = 'Continuar';
+    changeButtonLabel(btnPause, 'Continuar', 'Continuar leitura');
   };
   fala.onerror = (e) => {
     console.log(e);
   };
+}
+
+function changeButtonLabel(element, text, ariaLabel) {
+    element.textContent = text;
+    element.setAttribute('aria-label', ariaLabel);
 }
