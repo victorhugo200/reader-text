@@ -3,23 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reader text</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <title>Leitor de texto</title>
+    <meta name="description" content="Explore a melhor ferramenta de leitura.">    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oxanium:wght@200..800&display=swap"
       rel="stylesheet"
+      media="all"
     />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1>Leitor de texto</h1>
-      <textarea name="text" id="text"></textarea>
-      <button class="read" disabled>Ler</button>
-      <button class="pause" disabled>Parar</button>
+    <header>
+        <div class="container">
+            <h1>Leitor de texto</h1>
+        </div>
+    </header>
+    <div class="container">
+      <textarea name="text" id="text" aria-label="Digite o texto para leitura em voz alta"></textarea>
+        <div class="container-buttons">
+            <button aria-label="Ler texto" class="read" disabled>Ler</button>
+            <button aria-label="Parar leitura" class="pause" disabled>Parar</button>
+        </div>
     </div>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.min.js" defer></script>
   </body>
 </html>
