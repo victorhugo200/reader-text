@@ -4,7 +4,7 @@ const btnPause = document.querySelector('.pause');
 const { speechSynthesis } = window;
 let fala = null;
 
-text.addEventListener('blur', (event) => {
+text.addEventListener('blur', () => {
   const { value } = text;
   if (value) {
     enableElement(btn);
